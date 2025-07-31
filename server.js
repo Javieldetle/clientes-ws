@@ -2,6 +2,35 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Middleware para validar cabeceras: usuario, clave, token y Content-Type
+app.use((req, res, next) => {
+  const user = req.headers['usuario'];
+  const pass = req.headers['clave'];
+  const token = req.headers['token'];
+  const contentType = req.headers['content-type'];
+
+  // Validación
+  if (
+    user === 'javier' &&
+    pass === 'j123456' &&
+    token === 'mi_token_123' &&
+    contentType === 'application/json'
+  ) {
+    next(); // acceso permitido
+  } else {
+    res.status(401).json({
+      error: 'No autorizado',
+      detalles: {
+        usuario: user === 'javier',
+        clave: pass === 'j123456',
+        token: token === 'mi_token_123',
+        contentTypeCorrecto: contentType === 'application/json'
+      }
+    });
+  }
+});
+
+// Endpoint JSON
 app.get('/api/clientes', (req, res) => {
   res.json([
     {
@@ -31,6 +60,7 @@ app.get('/api/clientes', (req, res) => {
   ]);
 });
 
+// Inicio del servidor
 app.listen(port, () => {
   console.log(`Servidor en ejecución en puerto ${port}`);
 });
