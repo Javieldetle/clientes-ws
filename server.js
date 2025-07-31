@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 app.get('/api/clientes', (req, res) => {
   res.json([
     {
-      CodCliente: "C001",
+      CodCliente: "001",
       NombreCliente: "Cliente Alpha",
       Ano: 2025,
       Mes: 7,
@@ -13,7 +13,7 @@ app.get('/api/clientes', (req, res) => {
       TotalAlbaran: 12200.00
     },
     {
-      CodCliente: "C002",
+      CodCliente: "002",
       NombreCliente: "Cliente Beta",
       Ano: 2025,
       Mes: 7,
@@ -21,7 +21,7 @@ app.get('/api/clientes', (req, res) => {
       TotalAlbaran: 7900.50
     },
     {
-      CodCliente: "C003",
+      CodCliente: "003",
       NombreCliente: "Cliente Gamma",
       Ano: 2025,
       Mes: 7,
