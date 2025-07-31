@@ -7,7 +7,7 @@ app.get('/api/clientes', (req, res) => {
     {
       CodCliente: "C001",
       NombreCliente: "Cliente Alpha",
-      Año: 2025,
+      Ano: 2025,
       Mes: 7,
       TotalPedido: 12500.00,
       TotalAlbaran: 12200.00
@@ -15,7 +15,7 @@ app.get('/api/clientes', (req, res) => {
     {
       CodCliente: "C002",
       NombreCliente: "Cliente Beta",
-      Año: 2025,
+      Ano: 2025,
       Mes: 7,
       TotalPedido: 8300.50,
       TotalAlbaran: 7900.50
@@ -23,7 +23,7 @@ app.get('/api/clientes', (req, res) => {
     {
       CodCliente: "C003",
       NombreCliente: "Cliente Gamma",
-      Año: 2025,
+      Ano: 2025,
       Mes: 7,
       TotalPedido: 14200.00,
       TotalAlbaran: 14000.00
