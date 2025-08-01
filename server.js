@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 app.use((req, res, next) => {
   const user = req.headers['usuario'];
   const pass = req.headers['clave'];
-  const token = req.headers['token'];
+  const token = req.headers['x-token'];
   const contentType = req.headers['content-type'];
 
   // Validación
