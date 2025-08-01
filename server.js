@@ -72,6 +72,14 @@ app.get('/api/clientes', (req, res) => {
       Mes: 8,
       TotalPedido: 20200.00,
       TotalAlbaran: 20000.00
+    },
+    {
+      CodCliente: "006",
+      NombreCliente: "Cliente Goma",
+      Ano: 2025,
+      Mes: 98,
+      TotalPedido: 230200.00,
+      TotalAlbaran: 90000.00
     }
   ]);
 });
