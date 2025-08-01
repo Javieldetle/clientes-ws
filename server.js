@@ -77,7 +77,7 @@ app.get('/api/clientes', (req, res) => {
       CodCliente: "006",
       NombreCliente: "Cliente Goma",
       Ano: 2025,
-      Mes: 98,
+      Mes: 9,
       TotalPedido: 230200.00,
       TotalAlbaran: 90000.00
     }
